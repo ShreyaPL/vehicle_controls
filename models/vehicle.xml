@@ -1,0 +1,17 @@
+<mujocoinclude>
+  <!-- Pose origin: rear-axle center projected onto road. +x forward, +y left, +z up.
+       A mocap body lets your future C++ model supply position and orientation.
+       Dimensions: body 4.5 x 1.8 m, wheelbase 2.8 m, wheel-center track 1.5 m. -->
+  <body name="vehicle" mocap="true" pos="5 0 0.025">
+    <geom name="chassis" type="box" pos="1.4 0 0.65" size="2.25 0.9 0.3" rgba="0.08 0.4 0.85 1"/>
+    <geom name="cabin" type="box" pos="1.25 0 1.12" size="1.05 0.76 0.22" rgba="0.15 0.3 0.4 1"/>
+    <geom name="front_marker" type="box" pos="3.66 0 0.65" size="0.015 0.65 0.1" rgba="1 0.9 0.4 1"/>
+    <geom name="rear_marker" type="box" pos="-0.86 0 0.65" size="0.015 0.65 0.1" rgba="0.9 0.1 0.1 1"/>
+    <geom name="rear_left_wheel" type="cylinder" pos="0 0.75 0.33" size="0.3 0.13" euler="1.57079632679 0 0" rgba="0.035 0.035 0.035 1"/>
+    <geom name="rear_right_wheel" type="cylinder" pos="0 -0.75 0.33" size="0.3 0.13" euler="1.57079632679 0 0" rgba="0.035 0.035 0.035 1"/>
+    <geom name="front_left_wheel" type="cylinder" pos="2.8 0.75 0.33" size="0.3 0.13" euler="1.57079632679 0 0" rgba="0.035 0.035 0.035 1"/>
+    <geom name="front_right_wheel" type="cylinder" pos="2.8 -0.75 0.33" size="0.3 0.13" euler="1.57079632679 0 0" rgba="0.035 0.035 0.035 1"/>
+    <site name="rear_axle_reference" pos="0 0 1.5" size="0.08" rgba="1 0.2 0.2 1"/>
+    <site name="front_axle_reference" pos="2.8 0 1.5" size="0.08" rgba="0.2 1 0.2 1"/>
+  </body>
+</mujocoinclude>
