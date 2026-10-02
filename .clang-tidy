@@ -1,4 +1,0 @@
-# Scalar mathematical helpers intentionally take adjacent double arguments.
-Checks: '-*,bugprone-*,-bugprone-easily-swappable-parameters,performance-*,portability-*'
-WarningsAsErrors: '*'
-HeaderFilterRegex: '.*vehicle_controls/.*'

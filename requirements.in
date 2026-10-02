@@ -1,5 +1,0 @@
-# MuJoCo wheel supplies the native headers/library used by C++.
-mujoco==3.3.7
-numpy==1.26.4
-clang-format==18.1.8
-clang-tidy==18.1.8
