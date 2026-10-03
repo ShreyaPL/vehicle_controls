@@ -16,3 +16,13 @@ execute_process(COMMAND "${VC_PYTHON}" -c "import pathlib,mujoco; print(pathlib.
 find_path(MUJOCO_INCLUDE mujoco/mujoco.h PATHS "${MUJOCO_ROOT}/include" NO_DEFAULT_PATH REQUIRED)
 find_library(MUJOCO_LIBRARY NAMES mujoco libmujoco.so.3.3.7 PATHS "${MUJOCO_ROOT}" NO_DEFAULT_PATH REQUIRED)
 message(STATUS "Setup dependencies found. No implementation or test targets have been added.")
+
+add_library(bicycle_model src/bicycle_model.cpp)
+target_include_directories(bicycle_model PUBLIC include)
+target_compile_options(bicycle_model PRIVATE
+  -Wall -Wextra -Wpedantic)
+
+add_executable(bicycle_demo src/main.cpp)
+target_link_libraries(bicycle_demo PRIVATE bicycle_model)
+target_compile_options(bicycle_demo PRIVATE
+  -Wall -Wextra -Wpedantic)
