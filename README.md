@@ -1,7 +1,8 @@
 # Articulated Truck Controls Lab
 
 Environment and planning scaffold for a C++17 project you will implement yourself.
-There is no controller, simulator, model, ROS node, driver, or project test code here.
+A MuJoCo visualization scene is included. You will implement the vehicle motion,
+controller, ROS nodes, drivers, and tests yourself.
 
 ## Test the initial setup
 
@@ -50,3 +51,14 @@ Follow [the roadmap](docs/roadmap.md) at your own pace. The earlier generated im
 was reverted using Git; it is retained only in history. The current tree contains setup
 and planning files. The Python inventory and shell scripts are environment tooling only.
 Use a branch per milestone and commit your own implementation and validation evidence.
+
+## MuJoCo lane and vehicle
+
+```bash
+source scripts/activate.bash
+python -m mujoco.viewer --mjcf=models/lane_turn.xml
+```
+
+The car remains stationary until you supply its pose. This is a visualization scene,
+not an actuated vehicle physics model. See [scene notes](models/README.md) for geometry
+and the pose interface. Open lane_turn.xml, not the vehicle.xml include fragment.
